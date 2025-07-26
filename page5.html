@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Placement Statistics</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7faff;
+      color: #1f2937;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin: 20px 10px;
+      color: #111827;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 16px;
+      text-align: center;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    th {
+      background: linear-gradient(to right, #2563eb, #00b4d8);
+      color: white;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f1f5f9;
+    }
+
+    tr:hover {
+      background-color: #e0f2fe;
+      transition: 0.3s ease;
+    }
+
+    td {
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        background: white;
+      }
+
+      td {
+        text-align: left;
+        padding: 10px 15px;
+        border: none;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        color: #2563eb;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 The Placement Statistics</h1>
+    <h2>2022–23 and 2021–22 Batch Placement</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Computer</th>
+          <th>IT</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Year">2022–23</td>
+          <td data-label="Computer">113</td>
+          <td data-label="IT">75</td>
+          <td data-label="Total">188</td>
+        </tr>
+        <tr>
+          <td data-label="Year">2021–22</td>
+          <td data-label="Computer">196</td>
+          <td data-label="IT">84</td>
+          <td data-label="Total">280</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Company Visit Info</title>
+  <!-- Google Fonts for professional look -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .image {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    #info-display {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-left: 5px solid #3498db;
+      font-size: 16px;
+      color: #2c3e50;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+    #info-display:hover {
+      background-color: #eef5ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📢 Campus Recruitment Companies</h1>
+
+  <div class="image-container">
+    <!-- Update images and their data-info accordingly -->
+    <img src="image1.jpg" alt="Company 1" class="image" data-info="Eligibility: 10th: 60%, 12th: 60%, CGPA: 6.5+" />
+    <img src="image2.jpg" alt="Company 2" class="image" data-info="Eligibility: 10th: 60%, 12th: 60%, CGPA: 6.5+" />
+    <img src="image3.jpg" alt="Company 3" class="image" data-info="Eligibility: 10th: 60%, 12th: 60%, CGPA: 7.5+" />
+    <img src="image4.jpg" alt="Company 4" class="image" data-info="Eligibility: 10th: 70%, 12th: 60%, CGPA: 6.0+" />
+    <img src="image5.jpg" alt="Company 5" class="image" data-info="Eligibility: 10th: 60%, 12th: 75%, CGPA: 6.0+" />
+    <img src="image6.jpg" alt="Company 6" class="image" data-info="Eligibility: 10th: 60%, 12th: 60%, CGPA: 6.0+" />
+    <img src="image7.jpg" alt="Company 7" class="image" data-info="Eligibility: 10th: 65%, 12th: 60%, CGPA: 8.5+" />
+    <img src="image8.jpg" alt="Company 8" class="image" data-info="Eligibility: 10th: 60%, 12th: 60%, CGPA: 8.5+" />
+    <img src="image9.jpg" alt="Company 9" class="image" data-info="Eligibility: 10th: 60%, 12th: 75%, CGPA: 6.5+" />
+    <img src="image10.jpg" alt="Company 10" class="image" data-info="Eligibility: 10th: 60%, 12th: 60%, CGPA: 6.5+" />
+    <img src="image11.jpg" alt="Company 11" class="image" data-info="Eligibility: 10th: 80%, 12th: 60%, CGPA: 8.0+" />
+    <img src="image12.jpg" alt="Company 12" class="image" data-info="Eligibility: 10th: 60%, 12th: 60%, CGPA: 8.0+" />
+    <img src="image13.jpg" alt="Company 13" class="image" data-info="Eligibility: 10th: 60%, 12th: 60%, CGPA: 6.5+" />
+    <img src="image14.jpg" alt="Company 14" class="image" data-info="Eligibility: 10th: 80%, 12th: 60%, CGPA: 6.5+" />
+    <img src="image15.jpg" alt="Company 15" class="image" data-info="Eligibility: 10th: 60%, 12th: 80%, CGPA: 6.5+" />
+    <img src="image16.jpg" alt="Company 16" class="image" data-info="Eligibility: 10th: 70%, 12th: 60%, CGPA: 8.5+" />
+    <img src="image17.jpg" alt="Company 17" class="image" data-info="Eligibility: 10th: 60%, 12th: 60%, CGPA: 6.5+" />
+    <img src="image18.jpg" alt="Company 18" class="image" data-info="Eligibility: 10th: 60%, 12th: 60%, CGPA: 9.0+" />
+  </div>
+
+  <div id="info-display"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = document.querySelectorAll(".image");
+      const infoDisplay = document.getElementById("info-display");
+
+      images.forEach((image) => {
+        image.addEventListener("click", function () {
+          const info = this.getAttribute("data-info");
+          infoDisplay.innerHTML = `<strong>📋 Company Requirements:</strong><br>${info}`;
+          infoDisplay.style.display = "block";
+        });
+      });
+
+      infoDisplay.addEventListener("click", function () {
+        this.style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>

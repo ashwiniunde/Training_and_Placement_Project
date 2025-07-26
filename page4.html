@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Placement Guidelines</title>
+  <style>
+    :root {
+      --bg: #f0f2f5;
+      --card-bg: rgba(255, 255, 255, 0.8);
+      --blur: blur(10px);
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --text: #1f2937;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 15px;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .title {
+      background: linear-gradient(135deg, var(--accent), #00b4d8);
+      color: white;
+      padding: 24px;
+      border-radius: 15px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: var(--blur);
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.01);
+    }
+
+    .card-header {
+      background-color: var(--accent);
+      color: white;
+      padding: 16px 20px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-header:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .card-header span {
+      font-size: 1.3rem;
+      transition: transform 0.3s ease;
+    }
+
+    .card-header.active span {
+      transform: rotate(180deg);
+    }
+
+    .card-content {
+      padding: 20px;
+      background: white;
+      display: none;
+      animation: fadeIn 0.3s ease;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 1.5rem;
+        padding: 16px;
+      }
+
+      .card-header {
+        font-size: 1rem;
+      }
+
+      .card-content {
+        font-size: 0.95rem;
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">📋 Placement Guidelines Portal</div>
+
+    <!-- Card Section -->
+    <div class="card">
+      <div class="card-header" onclick="toggle(this)">📌 Pre-Placement Process <span>⮟</span></div>
+      <div class="card-content">
+        ✔️ Be punctual for all activities.<br>
+        ✔️ Attend pre-placement talks (PPTs) to be eligible.<br>
+        ✔️ Submit applications before deadlines.<br>
+        ✔️ You may apply to multiple companies, but once placed, you're out of the pool.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggle(this)">🎯 Selection Process <span>⮟</span></div>
+      <div class="card-content">
+        ✔️ Accept the first offer immediately.<br>
+        ✔️ Backing out leads to blacklisting.<br>
+        ✔️ No offer negotiations unless allowed by company.<br>
+        ✔️ Absence in interviews = disqualification.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggle(this)">🌟 Dream & Super Dream Offers <span>⮟</span></div>
+      <div class="card-content">
+        ✔️ Regular Offer: Basic job offer.<br>
+        ✔️ Dream: ≥ ₹7 LPA, Super Dream: ≥ ₹10 LPA.<br>
+        ✔️ You're allowed only 1 dream/super-dream offer.<br>
+        ✔️ Dual offers or upgrades depend on institute norms.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggle(this)">📑 Post-Placement Formalities <span>⮟</span></div>
+      <div class="card-content">
+        ✔️ Complete formalities with company and TnP office.<br>
+        ✔️ Offer letters come through placement department.<br>
+        ✔️ Raise issues directly to the company HR only after TnP approval.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggle(this)">📌 General Instructions <span>⮟</span></div>
+      <div class="card-content">
+        ✔️ Formal attire is mandatory for all placement activities.<br>
+        ✔️ Do not contact companies directly.<br>
+        ✔️ Job joining is post final exams, unless permitted.<br>
+        ✔️ Submit withdrawal form if exiting placement process.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggle(this)">✅ Best Practices for Students <span>⮟</span></div>
+      <div class="card-content">
+        ✔️ Start early and work as a team.<br>
+        ✔️ Check your emails & notices regularly.<br>
+        ✔️ Update your resume with feedback.<br>
+        ✔️ Stay connected with your class reps & coordinators.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggle(this)">💰 Refundable Security Deposit <span>⮟</span></div>
+      <div class="card-content">
+        ✔️ ₹5000 deposit is mandatory before placement starts.<br>
+        ✔️ Violation of rules leads to forfeit.<br>
+        ✔️ Refund after 6 months post graduation with proper documents.<br>
+        ✔️ Refund is via cheque or online transfer.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggle(header) {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector("span");
+
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        header.classList.remove("active");
+      } else {
+        document.querySelectorAll(".card-content").forEach(c => c.style.display = "none");
+        document.querySelectorAll(".card-header").forEach(h => h.classList.remove("active"));
+        content.style.display = "block";
+        header.classList.add("active");
+      }
+    }
+  </script>
+</body>
+</html>

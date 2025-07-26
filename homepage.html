@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login / Signup</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Login Form -->
+  <div class="form-container" id="loginContainer">
+    <h2>Welcome Back 👋</h2>
+    <form id="loginForm">
+      <input type="text" id="loginUsername" placeholder="Username" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <p>New here? <a href="#" onclick="toggleForm()">Create Account</a></p>
+  </div>
+
+  <!-- Signup Form -->
+  <div class="form-container" id="signupContainer" style="display: none;">
+    <h2>Join the Squad 🚀</h2>
+    <form id="signupForm">
+      <input type="text" id="signupUsername" placeholder="Username" required />
+      <input type="email" id="signupEmail" placeholder="Email" required />
+      <input type="password" id="signupPassword" placeholder="Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+    <div class="success" id="successMessage">Signed up successfully! 🎉</div>
+    <p>Already a member? <a href="#" onclick="toggleForm()">Log In</a></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
