@@ -1,5 +1,5 @@
 This is Training and Placement Managemnt System project where students can logging the account and then find the probality to question of the comapny and the comapny visit to campus and there Eligiblity certeria and Trainig and Placement Some Rules and guidelines.
- # 🔐 Stylish Login & Signup Form with Redirect (LocalStorage)
+ # Stylish Login & Signup Form with Redirect (LocalStorage)
 
 ## 📌 About the Project
 
@@ -23,14 +23,7 @@ It features real-time switching between login and signup, input validations, and
 
 - **HTML5**  
 - **CSS3**  
-- **JavaScript (ES6)**  
+- **JavaScript**  
 - **LocalStorage (Browser DB)**
 
 ---
-
-## 🚀 How to Use
-
-1. **Clone the repo**:
-   ```bash
-   git clone https://github.com/your-username/login-signup-ui.git
-
